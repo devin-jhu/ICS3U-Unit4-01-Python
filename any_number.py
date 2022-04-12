@@ -6,22 +6,24 @@
 
 
 def main():
-    # this function calculates the area and perimeter of a rectangle
+    # this program shows the sum of all numbers from 0 to number
+    counter = 0
+    sum = 0
 
     # input
-    width = int(input("Enter width of rectangle(mm): "))
-    height = int(input("Enter height of rectangle(mm): "))
+    number = input("Enter number (integer): ")
 
-    # process
-    area_of_rectangle = width * height
-    perimeter_of_rectangle = 2 * (width + height)
+    # process & output
+    try:
+        number_int = int(number)
+        while counter < number_int:
+            sum = sum + (counter + 1)
+            counter = counter + 1
+        print("The sum of all numbers to {0} is {1}".format(number_int, sum))
 
-    # output
-    print("")
-    print("Area is {0} mm².".format(area_of_rectangle))
-    print("Perimeter is {0} mm.".format(perimeter_of_rectangle))
-    print("")
-    print("Done.")
+    except Exception:
+        print("Not a number.")
+    print("\nDone.")
 
 
 if __name__ == "__main__":
